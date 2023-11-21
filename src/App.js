@@ -4,7 +4,7 @@ import Head from './Components/Head'
 
 function App() {
   return (
-    <div >
+    <div className='' >
       <Head/>
       <Body/>
     </div>
