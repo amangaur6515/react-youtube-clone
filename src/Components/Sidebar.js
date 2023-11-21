@@ -11,8 +11,28 @@ import { SiYoutubegaming } from "react-icons/si";
 import { FaFire } from "react-icons/fa";
 import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa";
+import { useSelector } from 'react-redux';
+import { MdOutlineVideoLibrary } from "react-icons/md";
 
 const Sidebar = () => {
+    const isMenuOpen=useSelector((store)=>store.app.isMenuOpen)
+    if(isMenuOpen===false){
+        return (
+            <div>
+                <ul style={{listStyle:"none"}}>
+                    <li style={{padding:"5px"}}><IoMdHome size="25px" style={{marginRight:"5px"}} /></li>
+                    <li style={{marginBottom:"20px"}}>Home</li>
+                    <li style={{padding:"5px"}}><SiYoutubeshorts size="25px" color='black' style={{marginRight:"5px"}} /> </li>
+                    <li style={{marginBottom:"20px"}}>Shorts</li>
+                    <li style={{padding:"5px"}}><MdOutlineSubscriptions size="25px" color='black' style={{marginRight:"5px"}} /></li>
+                    <li style={{marginBottom:"20px",marginLeft:"0px"}}>Subscriptions</li>
+                    <li style={{padding:"5px"}}><MdOutlineVideoLibrary size="25px" color='black' style={{marginRight:"5px"}} /></li>
+                    <li style={{marginBottom:"20px"}}>You</li>
+                    
+                </ul>
+            </div>
+        )
+    }
   return (
     <div className=''>
         <ul style={{listStyle:"none"}}>
@@ -38,6 +58,8 @@ const Sidebar = () => {
         <ul style={{listStyle:"none",margin:"5px"}}>
             <li style={{padding:"3px"}}><FaFire size="22px" style={{marginRight:"5px"}}/>Trending</li>
             <li style={{padding:"3px"}}><AiOutlineShopping size="22px" style={{marginRight:"5px"}}/>Shopping</li>
+            <li style={{padding:"3px"}}><FaRegNewspaper size="22px" style={{marginRight:"5px"}}/>News</li>
+            <li style={{padding:"3px"}}><FaRegNewspaper size="22px" style={{marginRight:"5px"}}/>News</li>
             <li style={{padding:"3px"}}><FaRegNewspaper size="22px" style={{marginRight:"5px"}}/>News</li>
         </ul>
     </div>
