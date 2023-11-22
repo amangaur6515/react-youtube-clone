@@ -13,6 +13,7 @@ import { AiOutlineShopping } from "react-icons/ai";
 import { FaRegNewspaper } from "react-icons/fa";
 import { useSelector } from 'react-redux';
 import { MdOutlineVideoLibrary } from "react-icons/md";
+import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const isMenuOpen=useSelector((store)=>store.app.isMenuOpen)
@@ -20,8 +21,11 @@ const Sidebar = () => {
         return (
             <div>
                 <ul style={{listStyle:"none"}}>
-                    <li style={{padding:"5px"}}><IoMdHome size="25px" style={{marginRight:"5px"}} /></li>
-                    <li style={{marginBottom:"20px"}}>Home</li>
+                    <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
+                            <li style={{padding:"5px"}}><IoMdHome size="25px" style={{marginRight:"5px"}} /></li>
+                            <li style={{marginBottom:"20px"}}>Home</li>
+                    </Link>
+                    
                     <li style={{padding:"5px"}}><SiYoutubeshorts size="25px" color='black' style={{marginRight:"5px"}} /> </li>
                     <li style={{marginBottom:"20px"}}>Shorts</li>
                     <li style={{padding:"5px"}}><MdOutlineSubscriptions size="25px" color='black' style={{marginRight:"5px"}} /></li>

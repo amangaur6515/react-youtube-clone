@@ -1,4 +1,5 @@
 import React from 'react'
+import { Outlet } from 'react-router-dom'
 import Sidebar from './Sidebar'
 import MainContainer from './MainContainer'
 
@@ -10,7 +11,7 @@ const Body = () => {
             <Sidebar/>
         </div>
         <div className='col-md-10' >
-            <MainContainer/>
+            <Outlet/>
         </div>
         
     </div>
