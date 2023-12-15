@@ -4,13 +4,15 @@ const appSlice=createSlice({
     name:"app",
     initialState:{
         isMenuOpen:false,
+        isOnWatchPage:false
     },
     reducers:{
         toggleMenu:(state)=>{
             state.isMenuOpen=!state.isMenuOpen;
         },
         closeMenu:(state)=>{
-            state.isMenuOpen=false;
+            state.isOnWatchPage=true;
+            
         }
     },
 })

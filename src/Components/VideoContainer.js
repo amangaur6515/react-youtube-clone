@@ -9,7 +9,7 @@ const VideoContainer = () => {
         const data=await fetch(YT_API)
         const json=await data.json();
         const arr=json.items
-        console.log(arr)
+        //console.log(arr)
         setVideos(arr)
     }
     useEffect(()=>{

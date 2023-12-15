@@ -2,7 +2,7 @@ import React from 'react'
 
 const ButtonList = () => {
   return (
-    <div className='mt-2 '>
+    <div className='mt-2'>
         <button className='btn mx-2' style={{backgroundColor:"black",color:"white"}}>All</button>
         <button className='btn mx-2' style={{backgroundColor:"#E8E8E8"}}>Mixes</button>
         <button className='btn mx-2' style={{backgroundColor:"#E8E8E8"}}>Music</button>

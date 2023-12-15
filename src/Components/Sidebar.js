@@ -17,7 +17,11 @@ import { Link } from 'react-router-dom';
 
 const Sidebar = () => {
     const isMenuOpen=useSelector((store)=>store.app.isMenuOpen)
-    if(isMenuOpen===false){
+    const isOnWatchPage=useSelector((store)=>store.app.isOnWatchPage)
+    if(isOnWatchPage===true){
+        return null;
+    }
+    if(isMenuOpen===false && isOnWatchPage===false ){
         return (
             <div>
                 <ul style={{listStyle:"none"}}>
@@ -37,6 +41,7 @@ const Sidebar = () => {
             </div>
         )
     }
+    
   return (
     <div className=''>
         <ul style={{listStyle:"none"}}>
@@ -68,6 +73,7 @@ const Sidebar = () => {
         </ul>
     </div>
   )
+    
 }
 
 export default Sidebar
