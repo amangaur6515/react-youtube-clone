@@ -18,7 +18,7 @@ const LiveChat = () => {
 
     },[])
   return (
-    <div className='container '>
+    <div className=' '>
         {chatMessages.map((c,i)=><ChatMessage
             key={i}
             name={c.name}
